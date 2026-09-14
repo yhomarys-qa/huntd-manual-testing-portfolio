@@ -17,14 +17,14 @@ This repository contains the end-to-end functional manual testing artifacts and 
 
 ### 📋 1. Core Test Cases Datasets
 The structural manual test suites designed for both environments can be viewed interactively in your browser without downloading:
-* 🌐 **[Click here to view the Web Test Cases Suite](./huntd__web%20%281%29.csv)**
-* 📱 **[Click here to view the Mobile Test Cases Suite](./huntd__mobile.csv)**
+* 🌐 **[Click here to view the Web Test Cases Suite](huntd-web.csv)**
+* 📱 **[Click here to view the Mobile Test Cases Suite](huntd-mobile.csv)**
 
 ### 🔍 2. Execution History & Test Runs (CSV Format)
 Access the live execution sheets tracking real results directly from our TestRail test cycles:
-* 🧪 **[Test Run 1: Smoke Test - Web (100% Passed)](./test_run_1__smoke_test__web.csv)**
-* 🧪 **[Test Run 2: Full Regression - Web (89% Passed)](./test_run_2__full_regression__web.csv)**
-* 🧪 **[Test Run 4: Full Execution - Mobile MVP (88% Passed)](./test_run_4__full_execution__mobile_mvp.csv)**
+* 🧪 **[Test Run 1: Smoke Test - Web (100% Passed)](test_run_1_smoke_test__web.csv)**
+* 🧪 **[Test Run 2: Full Regression - Web (89% Passed)](test_run_2_full_regression__web.csv)**
+* 🧪 **[Test Run 4: Full Execution - Mobile MVP (88% Passed)](test_run_4_full_executionn__mob_.csv)**
 
 ---
 
