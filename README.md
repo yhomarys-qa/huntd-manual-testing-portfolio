@@ -24,7 +24,7 @@ The structural manual test suites designed for both environments can be viewed i
 Access the live execution sheets tracking real results directly from our TestRail test cycles:
 * 🧪 **[Test Run 1: Smoke Test - Web (100% Passed)](test_run_1__smoke_test___web.csv)**
 * 🧪 **[Test Run 2: Full Regression - Web (89% Passed)](test_run_2__full_regression___web.csv)**
-* 🧪 **[Test Run 4: Full Execution - Mobile MVP (88% Passed)](test_run_4_full_executionn__mob_.csv)**
+* 🧪 **[Test Run 4: Full Execution - Mobile MVP (88% Passed)](test_run_4__full_execution___mobile_mvp.csv)**
 
 ---
 
