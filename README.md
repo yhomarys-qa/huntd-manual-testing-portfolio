@@ -108,4 +108,4 @@ To maintain top-tier industry standards, defects identified during execution cyc
 
 * **Priority:** Medium
 
-* **Evidence:** [Link to Screenshot/Video Workflow]([https://imgur.com](https://imgur.com/a/cZu96Ds))
+* **Evidence:** [Link to Screenshot/Video Workflow](https://imgur.com/a/cZu96Ds)
