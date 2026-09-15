@@ -98,7 +98,7 @@ To maintain top-tier industry standards, defects identified during execution cyc
   The text input field must accept and render all characters normally, including Portuguese accented vowels (á, é, í, ó, ú, â, ê, ô, ã, õ), matching standard text input behavior.
 
 * **Actual Result:**
-  The input field fails to combine dead keys/accents with vowels, preventing users from typing accented words correctly. It only accepts uncombined special characters isolated (e.g., typing results in "~", "^", or just "ç").
+  The input field fails to combine specific dead keys (tilde ~ and circumflex ^) with vowels, preventing users from typing words like "avô", "você", or "mão" correctly. The system successfully processes acute accents (á, é), but isolates or drops the text formatting when tilde or circumflex are applied, resulting in uncombined special characters (e.g., typing outputs strictly as "~", "^", or just "ç").
 
 * **Environment of Testing:**
   * **Device:** Emulated Android Device (Medium Phone)
