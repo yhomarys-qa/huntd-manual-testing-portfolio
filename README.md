@@ -9,7 +9,7 @@ This repository contains the end-to-end functional manual testing artifacts and 
 * **Test Management:** TestRail (Test case design, multi-run execution tracking, and metrics)
 * **Defect Management:** Jira (Bug lifecycle tracking and reporting)
 * **Frameworks & Methodologies:** Agile (Scrum/Kanban), Software Testing Life Cycle (STLC)
-* **Testing Types:** Functional Web/Mobile Testing, Smoke Testing, Regression Testing, Black-Box Testing (Boundary Value Analysis & Equivalence Partitioning)
+* **Testing Types:** Functional Web/Mobile Testing, Smoke Testing, Regression Testing, Positive and negative tests, Black-Box Testing (Boundary Value Analysis & Equivalence Partitioning)
 
 ---
 
