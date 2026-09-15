@@ -91,7 +91,7 @@ To maintain top-tier industry standards, defects identified during execution cyc
 
 * **Steps to Reproduce:**
   1. Tap on the chat text input field to open the device's keyboard.
-  2. Attempt to type words that contain accented vowels (e.g., "não", "você", "pensei", "avô").
+  2. Attempt to type words that contain accented vowels (e.g., "não", "você", "avô").
   3. Observe the characters displayed within the input field.
 
 * **Expected Result:**
