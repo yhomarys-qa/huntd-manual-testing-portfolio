@@ -1,6 +1,6 @@
 # HUNTD (Web & Mobile) - Portfólio de Testes Manuais
 
-## 📌 1. Contexto do Produto
+## 📌 1. Visão Geral da Plataforma
 
 A HUNTD é uma plataforma de recrutamento Web3 que conecta profissionais de tecnologia a empresas e startups, permitindo o gerenciamento de perfis, a busca de oportunidades e a comunicação entre candidatos e recrutadores.
 
@@ -8,7 +8,7 @@ O objetivo deste projeto foi avaliar o funcionamento dessas funcionalidades nos 
 
 ---
 
-## 🔎 2. Análise e Definição da Estratégia
+## 🔎 1. Análise e Definição da Estratégia
 
 Antes de definir os cenários de teste, explorei a plataforma para compreender seu funcionamento, os perfis de usuários, as regras de negócio e os principais fluxos de utilização.
 
