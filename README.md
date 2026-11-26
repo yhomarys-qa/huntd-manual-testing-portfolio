@@ -1,111 +1,184 @@
-# HUNTD (Web & Mobile) - Comprehensive Manual Testing Portfolio
+# HUNTD (Web & Mobile) - Portfólio de Testes Manuais
 
-## 📌 Project Overview
-This repository contains the end-to-end functional manual testing artifacts and execution histories for the **HUNTD ecosystem, spanning both Web and Mobile platforms**. The main objective of this project was to establish quality assurance gates, validate platform-specific user acceptance criteria, and perform rigorous cross-platform defect management across multiple distinct test cycles.
+## 📌 1. Contexto do Produto
 
----
+A HUNTD é uma plataforma de recrutamento Web3 que conecta profissionais de tecnologia a empresas e startups, permitindo o gerenciamento de perfis, a busca de oportunidades e a comunicação entre candidatos e recrutadores.
 
-## 🛠️ Tools & Methodologies Used
-* **Test Management:** TestRail (Test case design, multi-run execution tracking, and metrics)
-* **Defect Management:** Jira (Bug lifecycle tracking and reporting)
-* **Frameworks & Methodologies:** Agile (Scrum/Kanban), Software Testing Life Cycle (STLC)
-* **Testing Types:** Functional Web/Mobile Testing, Smoke Testing, Regression Testing, Positive and negative tests, Black-Box Testing (Boundary Value Analysis & Equivalence Partitioning)
+O objetivo deste projeto foi avaliar o funcionamento dessas funcionalidades nos ambientes Web e Mobile, verificando se os fluxos correspondiam aos comportamentos esperados, respeitavam as regras de negócio e atendiam às necessidades de utilização da plataforma.
 
 ---
 
-## 📊 Testing Artifacts & Deliverables
+## 🔎 2. Análise e Definição da Estratégia
 
-### 📋 1. Core Test Cases Datasets
-The structural manual test suites designed for both environments can be viewed interactively in your browser without downloading:
-* 🌐 **[Click here to view the Web Test Cases Suite](huntd-web.csv)**
-* 📱 **[Click here to view the Mobile Test Cases Suite](huntd-mobile.csv)**
+Antes de definir os cenários de teste, explorei a plataforma para compreender seu funcionamento, os perfis de usuários, as regras de negócio e os principais fluxos de utilização.
 
-### 🔍 2. Execution History & Test Runs (CSV Format)
-Access the live execution sheets tracking real results directly from our TestRail test cycles:
-* 🧪 **[Test Run 1: Smoke Test - Web (100% Passed)](test_run_1__smoke_test___web.csv)**
-* 🧪 **[Test Run 2: Full Regression - Web (89% Passed)](test_run_2__full_regression___web.csv)**
-* 🧪 **[Test Run 4: Full Execution - Mobile MVP (88% Passed)](test_run_4__full_execution___mobile_mvp.csv)**
+Analisei as funcionalidades disponíveis para identificar os comportamentos esperados e as condições que precisavam ser validadas. A partir dessa análise, defini os cenários considerando a importância de cada funcionalidade e os possíveis riscos associados ao seu funcionamento.
 
----
+- Analisei as regras de negócio e identifiquei os comportamentos esperados de cada funcionalidade.
+- Defini cenários positivos e negativos, considerando diferentes entradas de dados, condições-limite e possíveis inconsistências.
+- Considerei diferentes combinações de dados e condições de utilização para ampliar a cobertura das validações.
+- Priorizei os fluxos essenciais da plataforma e as funcionalidades com impacto direto na utilização pelos usuários.
+- Organizei a cobertura dos testes para os ambientes Web e Mobile, respeitando os respectivos escopos.
 
-## 📈 Key Project Metrics & Test Runs
-The metrics below reflect the exact real-world results tracked within TestRail across the project life cycle:
-
-### 🌐 1. Test Run 1: Smoke Test - Web
-* **Objective:** Validate critical workflows and core paths of the Web system.
-* **Total Executions:** 31 Test Cases
-* **Status:** **100% Passed** (0 Defects Found) — Build verified as stable for deeper testing.
-
-### 🌐 2. Test Run 2: Full Regression - Web
-* **Objective:** Comprehensive 100% regression round covering all web environments and edge cases.
-* **Total Executions:** 584 Test Cases
-* **Passed:** 519 Test Cases (89% Pass Rate)
-* **Failed:** 65 Functional Defects (11% Failure Rate) — Mapped and logged into Jira.
-
-### 📱 3. Test Run 4: Full Execution - Mobile MVP
-* **Objective:** Strict validation of native application core subset features (MVP scope restriction).
-* **Total Executions:** 8 Test Cases
-* **Passed:** 7 Test Cases (88% Pass Rate)
-* **Failed:** 1 Critical Bug (13% Failure Rate) — Mobile chat communication input block.
+Essa análise serviu como base para a elaboração dos casos de teste e para determinar quais comportamentos precisavam ser avaliados durante as execuções.
 
 ---
 
-## 🐛 Defect Reporting Standard (Jira Pattern)
-To maintain top-tier industry standards, defects identified during execution cycles were documented in Jira using a rigorous technical format. Below are explicit engineering reports showcasing the logging standards for both platforms:
+## 🐛 4. Investigação e Documentação de Defeitos
 
-### 🌐 1. WEB PLATFORM EXAMPLE (From Test Run 2: Full Regression)
-#### 🛑 BUG-001: Password field accepts 2 characters instead of 8-character minimum
+Durante as execuções, concentrei a investigação nos comportamentos que apresentaram divergências em relação aos resultados esperados. Busquei reproduzir as falhas em condições específicas, compreender em quais situações ocorriam e reunir informações que permitissem documentar cada inconsistência.
 
-* **Preconditions:**
-  1. The user is on the HUNTD Web registration or password setup page.
-  2. No active session is running in the current browser tab.
+- Investiguei comportamentos inesperados, reproduzindo as falhas por meio de sequências de passos e condições específicas.
+- Comparei os resultados obtidos com os esperados para identificar divergências e compreender em quais situações ocorriam.
+- Registrei **66 defeitos no Jira**, sendo 65 identificados na plataforma Web e 1 no ambiente Mobile.
+- Documentei pré-condições, passos para reprodução, resultados esperados e obtidos, evidências e classificação de severidade e prioridade.
+- Estruturei os relatos para apresentar informações claras e permitir a reprodução dos problemas identificados.
 
-* **Steps to Reproduce:**
-  1. Click on the "New Password" input field.
-  2. Type a short password with only 2 characters (e.g., `12`).
-  3. Click the form submission or "Save/Create" button.
-
-* **Expected Result:**
-  The system must reject the form, trigger an error, and display a validation message: *"Password must be at least 8 characters long"*.
-
-* **Actual Result:**
-  The system bypasses validation, accepts the 2-character input, and successfully processes the form request without any warnings.
-
-* **Environment of Testing:**
-  * **OS:** Windows 11 Home
-  * **Browser:** Google Chrome (Latest Version)
-  * **Resolution:** 1920x1080 (Desktop Viewport)
-
-* **Priority:** High
-
-* **Evidence:** [Link to Screenshot/Video Workflow](https://imgur.com/a/uVNfP9v)
 ---
 
-### 📱 2. MOBILE PLATFORM EXAMPLE (From Test Run 4: Mobile MVP)
-#### 🛑 BUG-MOB-001: Chat communication input field does not accept accented vowels
+### Defeitos Documentados
 
-* **Preconditions:**
-  1. The native mobile application is installed and opened.
-  2. The user is logged into the application.
-  3. The user has accessed the communication feature and opened an active chat conversation.
+#### 🌐 WEB — BUG-001: Campo de senha aceita 2 caracteres em vez do mínimo de 8
 
-* **Steps to Reproduce:**
-  1. Tap on the chat text input field to open the device's keyboard.
-  2. Attempt to type words that contain accented vowels (e.g., "não", "você", "avô").
-  3. Observe the characters displayed within the input field.
+**Pré-condições:**
+1. O usuário está na página de cadastro ou configuração de senha da HUNTD Web.
+2. Não existe uma sessão ativa na aba atual do navegador.
 
-* **Expected Result:**
-  The text input field must accept and render all characters normally, including Portuguese accented vowels (á, é, í, ó, ú, â, ê, ô, ã, õ), matching standard text input behavior.
+**Passos para Reprodução:**
+1. Clicar no campo "New Password".
+2. Inserir uma senha com apenas 2 caracteres (ex.: `12`).
+3. Clicar no botão de envio ou em "Save/Create".
 
-* **Actual Result:**
-  The input field fails to combine specific dead keys (tilde ~ and circumflex ^) with vowels, preventing users from typing words like "avô", "você", or "mão" correctly. The system successfully processes acute accents (á, é), but isolates or drops the text formatting when tilde or circumflex are applied, resulting in uncombined special characters (e.g., typing outputs strictly as "~", "^", or just "ç").
+**Resultado Esperado:**
 
-* **Environment of Testing:**
-  * **Device:** Emulated Android Device (Medium Phone)
-  * **OS:** Android 14.0 (API 34)
-  * **Browser:** Google Chrome Mobile (inside the emulator)
-  * **App Version:** N/A (Production Build 2026 / MVP Web)
+O sistema deve rejeitar a entrada e apresentar uma mensagem informando que a senha precisa conter no mínimo 8 caracteres.
 
-* **Priority:** Medium
+**Resultado Obtido:**
 
-* **Evidence:** [Link to Screenshot/Video Workflow](https://imgur.com/a/cZu96Ds)
+O sistema aceita a senha de 2 caracteres e processa o formulário sem apresentar qualquer aviso de validação.
+
+**Ambiente de Teste:**
+- Sistema Operacional: Windows 11 Home
+- Navegador: Google Chrome
+- Resolução: 1920x1080
+
+**Prioridade:** Alta
+
+**Evidência:** [Visualizar Screenshot/Vídeo](https://imgur.com/a/uVNfP9v)
+---
+
+#### 📱 MOBILE — BUG-MOB-001: Campo de comunicação não aceita corretamente caracteres acentuados
+
+**Pré-condições:**
+1. O ambiente Mobile MVP está acessível.
+2. O usuário acessou a funcionalidade de comunicação e abriu uma conversa ativa.
+
+**Passos para Reprodução:**
+1. Tocar no campo de entrada da conversa para abrir o teclado do dispositivo.
+2. Digitar palavras que contenham vogais acentuadas, como "não", "você" e "avô".
+3. Observar os caracteres apresentados no campo de entrada.
+
+**Resultado Esperado:**
+
+O campo deve aceitar e apresentar corretamente os caracteres acentuados, incluindo acentos agudos, circunflexos e til.
+
+**Resultado Obtido:**
+
+O campo apresenta falhas ao combinar determinadas teclas mortas, como til e circunflexo, com as vogais. Isso impede a digitação correta de palavras como "avô", "você" e "mão".
+
+**Ambiente de Teste:**
+- Dispositivo: Emulador Android (Medium Phone)
+- Sistema Operacional: Android 14 (API 34)
+- Navegador: Google Chrome Mobile
+- Aplicativo: Mobile MVP
+
+**Prioridade:** Média
+
+**Evidência:** [Visualizar Screenshot/Vídeo](https://imgur.com/a/cZu96Ds)
+---
+
+## 🔄 5. Testes de Regressão
+
+Nos testes de regressão, considerei a necessidade de verificar se as funcionalidades já existentes continuavam apresentando os comportamentos esperados, avaliando possíveis impactos em outros fluxos da plataforma. Para isso, organizei uma rodada de validação com os casos de teste existentes, buscando identificar falhas que pudessem comprometer o funcionamento do produto.
+
+- Selecionei e executei casos de teste que abrangiam funcionalidades e fluxos existentes da plataforma Web.
+- Reavaliei os comportamentos das funcionalidades considerando diferentes condições de utilização e regras de negócio.
+- Analisei os resultados das execuções para identificar falhas funcionais e possíveis inconsistências em outros fluxos.
+- Registrei os resultados no TestRail, permitindo acompanhar os casos aprovados, reprovados e a cobertura das validações realizadas.
+
+---
+
+## 📊 6. Resultados e Conclusão
+
+Após consolidar os dados das execuções e os defeitos registrados, analisei os resultados para avaliar o comportamento das funcionalidades verificadas, identificar os principais problemas encontrados e compreender seus possíveis impactos na utilização da plataforma.
+
+### 🌐 Resultados — Plataforma Web
+
+| Ciclo de Teste | Executados | Aprovados | Reprovados |
+|---|---:|---:|---:|
+| Smoke Testing | 31 | 31 | 0 |
+| Regressão Completa | 584 | 519 | 65 |
+| **Total** | **615** | **550** | **65** |
+
+- Smoke Testing: 100% de aprovação.
+- Regressão: aproximadamente 89% de aprovação.
+- 65 defeitos identificados no ambiente Web.
+
+### 📱 Resultados — Mobile MVP
+
+| Indicador | Resultado |
+|---|---:|
+| Casos Executados | 8 |
+| Aprovados | 7 |
+| Reprovados | 1 |
+| Taxa de Aprovação | 88% |
+| Taxa de Reprovação | 13% |
+
+- 1 defeito identificado no ambiente Mobile.
+
+### Indicadores Gerais do Projeto
+
+- **623 execuções de teste** nos ambientes Web e Mobile.
+- **66 defeitos identificados e documentados no Jira.**
+- **557 casos aprovados** considerando todos os ciclos apresentados.
+- **66 casos reprovados** considerando todos os ciclos apresentados.
+
+### Principais Problemas Identificados
+
+Durante as validações, foram identificadas inconsistências que poderiam comprometer aspectos importantes da utilização da plataforma, incluindo:
+
+- Falha na validação da senha, permitindo o cadastro de valores inferiores ao mínimo estabelecido.
+- Falha no campo de comunicação Mobile ao processar determinados caracteres acentuados.
+
+Os resultados também demonstraram que, embora o Smoke Testing Web tenha apresentado 100% de aprovação, a execução mais abrangente de regressão revelou outras inconsistências funcionais que exigiam atenção.
+
+Ao relacionar os resultados das execuções às regras de negócio e aos comportamentos esperados, foi possível avaliar as funcionalidades verificadas, identificar riscos de qualidade e documentar os pontos que necessitavam de investigação.
+
+O projeto proporcionou experiência prática na definição de estratégias de teste, validação funcional, investigação de defeitos, gerenciamento de testes e avaliação da qualidade de aplicações Web e Mobile.
+
+---
+
+## 🛠️ Ferramentas e Metodologias
+
+- **Gerenciamento de Testes:** TestRail (elaboração de casos de teste, organização das execuções e acompanhamento de métricas).
+- **Gerenciamento de Defeitos:** Jira (registro, classificação e documentação de bugs).
+- **Tipos de Teste:** Testes Funcionais, Smoke Testing, Testes de Regressão, Testes Positivos e Negativos.
+- **Técnicas de Teste:** Caixa-Preta, Particionamento de Equivalência e Análise de Valor-Limite.
+- **Metodologias:** Fundamentos de Scrum e Kanban e Ciclo de Vida de Testes de Software (STLC).
+
+---
+
+## 📂 Artefatos e Evidências de Testes
+
+Os arquivos abaixo disponibilizam os casos de teste elaborados e os registros das execuções realizadas durante o projeto.
+
+### 📋 1. Casos de Teste
+
+- 🌐 **[Visualizar Casos de Teste Web](huntd-web.csv)**
+- 📱 **[Visualizar Casos de Teste Mobile](huntd-mobile.csv)**
+
+### 🔍 2. Histórico de Execuções (Test Runs)
+
+- 🧪 **[Test Run 1: Smoke Test - Web (100% aprovados)](test_run_1__smoke_test___web.csv)**
+- 🧪 **[Test Run 2: Regressão Completa - Web (89% aprovados)](test_run_2__full_regression___web.csv)**
+- 📱 **[Test Run 4: Execução Completa - Mobile MVP (88% aprovados)](test_run_4__full_execution___mobile_mvp.csv)**
