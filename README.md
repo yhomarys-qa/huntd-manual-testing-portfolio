@@ -8,19 +8,32 @@ O objetivo deste projeto foi avaliar o funcionamento dessas funcionalidades nos 
 
 ---
 
-## 🔎 1. Análise e Definição da Estratégia
+## 🔎 2. Análise e Definição da Estratégia
 
 Antes de definir os cenários de teste, explorei a plataforma para compreender seu funcionamento, os perfis de usuários, as regras de negócio e os principais fluxos de utilização.
 
 Analisei as funcionalidades disponíveis para identificar os comportamentos esperados e as condições que precisavam ser validadas. A partir dessa análise, defini os cenários considerando a importância de cada funcionalidade e os possíveis riscos associados ao seu funcionamento.
 
-- Analisei as regras de negócio e identifiquei os comportamentos esperados de cada funcionalidade.
-- Defini cenários positivos e negativos, considerando diferentes entradas de dados, condições-limite e possíveis inconsistências.
-- Considerei diferentes combinações de dados e condições de utilização para ampliar a cobertura das validações.
-- Priorizei os fluxos essenciais da plataforma e as funcionalidades com impacto direto na utilização pelos usuários.
-- Organizei a cobertura dos testes para os ambientes Web e Mobile, respeitando os respectivos escopos.
+Analisei as regras de negócio para identificar os comportamentos esperados de cada funcionalidade e defini cenários positivos e negativos, considerando diferentes entradas de dados, condições-limite e possíveis inconsistências.
+
+Considerei diferentes combinações de dados e condições de utilização para ampliar a cobertura das validações, priorizando os fluxos essenciais da plataforma e as funcionalidades com impacto direto na experiência dos usuários, e organizando os testes para os ambientes Web e Mobile de acordo com seus respectivos escopos.
 
 Essa análise serviu como base para a elaboração dos casos de teste e para determinar quais comportamentos precisavam ser avaliados durante as execuções.
+
+---
+
+## 🧪 3. Execução e Validação
+
+A partir dos comportamentos identificados e dos cenários definidos, elaborei casos de teste utilizando diferentes técnicas de teste de caixa-preta. Organizei os casos no TestRail para estruturar a cobertura, acompanhar as execuções e registrar os resultados obtidos.
+
+As validações tiveram como foco verificar se o comportamento apresentado pelas funcionalidades correspondia às regras de negócio e aos resultados esperados.
+
+- Elaborei casos de teste utilizando técnicas de particionamento de equivalência e análise de valor-limite.
+- Organizei os casos de teste no TestRail, estruturando as execuções e acompanhando os resultados.
+- Executei testes funcionais e Smoke na plataforma Web.
+- Realizei validações no ambiente Mobile, considerando o escopo MVP.
+- Verifiquei os comportamentos das funcionalidades por meio de diferentes entradas de dados, interações e condições de utilização.
+- Comparei os resultados obtidos com os esperados para identificar divergências em relação aos critérios definidos.
 
 ---
 
@@ -34,9 +47,9 @@ Durante as execuções, concentrei a investigação nos comportamentos que apres
 - Documentei pré-condições, passos para reprodução, resultados esperados e obtidos, evidências e classificação de severidade e prioridade.
 - Estruturei os relatos para apresentar informações claras e permitir a reprodução dos problemas identificados.
 
----
+### 🐛 Registro de Defeitos — Jira
 
-### Defeitos Documentados
+Durante as validações, foram identificados e registrados defeitos no Jira. Abaixo, apresento dois registros detalhados, selecionados para demonstrar as inconsistências encontradas nas versões Web e Mobile.
 
 #### 🌐 WEB — BUG-001: Campo de senha aceita 2 caracteres em vez do mínimo de 8
 
@@ -65,6 +78,7 @@ O sistema aceita a senha de 2 caracteres e processa o formulário sem apresentar
 **Prioridade:** Alta
 
 **Evidência:** [Visualizar Screenshot/Vídeo](https://imgur.com/a/uVNfP9v)
+
 ---
 
 #### 📱 MOBILE — BUG-MOB-001: Campo de comunicação não aceita corretamente caracteres acentuados
@@ -95,6 +109,7 @@ O campo apresenta falhas ao combinar determinadas teclas mortas, como til e circ
 **Prioridade:** Média
 
 **Evidência:** [Visualizar Screenshot/Vídeo](https://imgur.com/a/cZu96Ds)
+
 ---
 
 ## 🔄 5. Testes de Regressão
