@@ -129,11 +129,18 @@ Após consolidar os dados das execuções e os defeitos registrados, analisei os
 
 ### 🌐 Resultados — Plataforma Web
 
+| Indicador | Resultado |
+|---|---:|
+| Total de testes executados | **615** |
+| Testes aprovados | **550 (89,4%)** |
+| Testes reprovados | **65 (10,6%)** |
+
+**Detalhamento por ciclo de teste**
+
 | Ciclo de Teste | Executados | Aprovados | Reprovados |
 |---|---:|---:|---:|
-| Smoke Testing | 31 | 31 | 0 |
+| Teste de Fumaça | 31 | 31 | 0 |
 | Regressão Completa | 584 | 519 | 65 |
-| **Total** | **615** | **550** | **65** |
 
 - Smoke Testing: 100% de aprovação.
 - Regressão: aproximadamente 89% de aprovação.
