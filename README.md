@@ -131,16 +131,16 @@ Após consolidar os dados das execuções e os defeitos registrados, analisei os
 
 | Indicador | Resultado |
 |---|---:|
-| Total de testes executados | **615** |
-| Testes aprovados | **550 (89,4%)** |
-| Testes reprovados | **65 (10,6%)** |
+| TCs executados na regressão | **584** |
+| TCs aprovados | **519 (88,9%)** |
+| TCs reprovados | **65 (11,1%)** |
 
-**Detalhamento por ciclo de teste**
-
-| Ciclo de Teste | Executados | Aprovados | Reprovados |
-|---|---:|---:|---:|
-| Teste de Fumaça | 31 | 31 | 0 |
-| Regressão Completa | 584 | 519 | 65 |
+**Teste de Fumaça**
+| Indicador | Resultado |
+|---|---:|
+| TCs executados | **31** |
+| TCs aprovados | **31 (100%)** |
+| TCs reprovados | **0 (0%)** |
 
 - Smoke Testing: 100% de aprovação.
 - Regressão: aproximadamente 89% de aprovação.
@@ -150,20 +150,18 @@ Após consolidar os dados das execuções e os defeitos registrados, analisei os
 
 | Indicador | Resultado |
 |---|---:|
-| Casos Executados | 8 |
-| Aprovados | 7 |
-| Reprovados | 1 |
-| Taxa de Aprovação | 88% |
-| Taxa de Reprovação | 13% |
+| TCs executados | **7** |
+| TCs aprovados | **7 (100%)** |
+| TCs reprovados | **0 (0%)** |
 
 - 1 defeito identificado no ambiente Mobile.
 
 ### Indicadores Gerais do Projeto
 
-- **623 execuções de teste** nos ambientes Web e Mobile.
-- **66 defeitos identificados e documentados no Jira.**
-- **557 casos aprovados** considerando todos os ciclos apresentados.
-- **66 casos reprovados** considerando todos os ciclos apresentados.
+- **591 casos de teste executados** nos ambientes Web e Mobile.
+- **526 casos de teste aprovados** considerando os resultados das validações.
+- **65 casos de teste reprovados** durante a execução da regressão Web.
+- **Defeitos identificados e registrados no Jira** durante as validações.
 
 ### Principais Problemas Identificados
 
