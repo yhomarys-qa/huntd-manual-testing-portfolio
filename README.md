@@ -151,17 +151,17 @@ Após consolidar os dados das execuções e os defeitos registrados, analisei os
 | Indicador | Resultado |
 |---|---:|
 | TCs executados | **7** |
-| TCs aprovados | **7 (100%)** |
-| TCs reprovados | **0 (0%)** |
+| TCs aprovados | **6 (85,7%)** |
+| TCs reprovados | **1 (14,3%)** |
 
 - 1 defeito identificado no ambiente Mobile.
 
 ### Indicadores Gerais do Projeto
 
-- **591 casos de teste executados** nos ambientes Web e Mobile.
-- **526 casos de teste aprovados** considerando os resultados das validações.
-- **65 casos de teste reprovados** durante a execução da regressão Web.
-- **Defeitos identificados e registrados no Jira** durante as validações.
+- **591 casos de teste executados** nos ambientes Web e Mobile (584 Web + 7 Mobile).
+- **525 casos de teste aprovados** (519 Web + 6 Mobile).
+- **66 casos de teste reprovados** (65 Web + 1 Mobile).
+- **66 defeitos identificados e registrados no Jira** (65 Web + 1 Mobile)..
 
 ### Principais Problemas Identificados
 
